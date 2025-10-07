@@ -3,10 +3,10 @@ const _center = { lat: -27.14727549642697, lng: -48.58708161563171 }; // Your ce
 // -27.14727549642697, -48.58708161563171
 
 const BOUNDS = {
-	north: _center.lat + 0.004,
-	south: _center.lat - 0.004,
-	east: _center.lng + 0.006,
-	west: _center.lng - 0.008,
+	north: _center.lat + 0.010,
+	south: _center.lat - 0.014,
+	east: _center.lng + 0.015,
+	west: _center.lng - 0.015,
 };
 
 function initMap() {
@@ -17,21 +17,23 @@ function initMap() {
 			latLngBounds: BOUNDS,
 			strictBounds: false,
 		},
-		zoom: 17,
+		zoom: 16,
 		mapTypeId: "satellite",
 		mapId: 'MAP_ID',
 		mapTypeControl: false,
 		fullscreenControl: false,
 		streetViewControl: false,
-		minZoom: 17, // Minimum zoom level
+		minZoom: 16, // Minimum zoom level
 		maxZoom: 20, // Maximum zoom level
 	});
 
 	// -27.147997334974797, -48.5923410773642
+	// -27.152905154756596, -48.57885333864494
 
 	// Markers data: Name, Latitude, Longitude, Image URL, Scaled Size (width, height), ShowTag, PanoramaToShow
 	const markers = [
-		["Monaco", -27.147997334974797, -48.5923410773642, 'MonacoGeo.png', 100, 160, 'M_Monaco', 'MonacoEsquinaDir']
+		["Monaco", -27.147997334974797, -48.5923410773642, 'MonacoGeo.png', 100, 160, 'M_Monaco', 'MonacoEsquinaDir'],
+		["Catalunya", -27.152905154756596, -48.57885333864494, 'CatalunyaGeo.png', 100, 160, 'M_Cata', 'MonacoEsquinaDir']
 	];
 
 	// Loop over markers array to create markers on the map
